@@ -39,6 +39,7 @@
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
+  --normal-font-weight:400
 
   /*========== Margenes Bottom ==========*/
   /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
@@ -145,4 +146,28 @@ body::-webkit-scrollbar-thumb {
 .home-slider img {
   position: relative;
   right: 1px;
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 1200px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+
+
+}
+
+@media screen and (max-width:350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
+
+
+@media screen and (min-width:768px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
