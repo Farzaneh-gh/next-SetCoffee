@@ -1,0 +1,18 @@
+.article {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.article div div {
+  display: flex;
+  justify-content: center;
+text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 0.5rem;
+  font-size: .7rem;
+  gap: .2rem;
+}
+
+
