@@ -1,0 +1,14 @@
+.title {
+  color: #114639;
+  font-size: var(--h1-font-size);
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.slider{
+    padding-top: 2rem;
+}

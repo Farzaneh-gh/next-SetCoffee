@@ -1,0 +1,80 @@
+.promot_container {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.rows {
+  display: flex;
+  margin-bottom: 5rem;
+}
+.firstItem {
+  flex: 55%;
+  position: relative;
+}
+
+.secondItem {
+  flex: 45%;
+  padding: 2rem 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.club {
+  position: absolute;
+  background-color: #fff;
+  color: var(--title-color);
+  bottom: -5px;
+  width: 60%;
+  padding: 2rem;
+}
+
+.rows span {
+  color: #114639;
+  font-size: var(--h1-font-size);
+}
+
+.rows p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.coffee_image {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.title {
+  color: #711d1c;
+  font-size: 44px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.rows div:nth-child(1) {
+  text-align:justify;
+  line-height: 1.8rem;
+}
+
+.red_btn {
+  color: #fff;
+  background-color: #711d1c;
+  border: 1px solid #711d1c;
+  padding: 0.8rem 1.2rem;
+  margin-top: 1rem;
+}
+
+.white_btn {
+  color: black;
+  padding: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid gray;
+
+}

@@ -1,0 +1,127 @@
+.article_container {
+  overflow: hidden;
+  position: relative;
+}
+.article_container:hover .image_container:nth-child(1)::after {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.7s ease;
+}
+.article_container:hover .img_container:nth-child(1) {
+  transform: scale(1.03);
+}
+.date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+.date span {
+  display: block;
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+  color: black;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 5%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.tag {
+  background-color: rgb(52, 24, 14);
+  font-family: 13px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.title {
+  word-wrap: break-word;
+  margin: 15px 0;
+  line-height: 1.5;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.details div img {
+  width: 20px;
+  border-radius: 20px;
+}
+
+.details div {
+  display: flex;
+  gap: 13px;
+  color: gray;
+  justify-content: center;
+  align-items: normal;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+.tooltip {
+  position: absolute !important;
+  top: -35px;
+  background-color: black;
+  padding: 0.3rem 0.3rem 0;
+  border-radius: 4px;
+  z-index: 999;
+  opacity: 0;
+  color: white !important;
+  display: flex;
+  gap: 5px;
+}
+.share:hover .tooltip {
+  opacity: 1;
+}
+.tooltip svg {
+  font-size: 1rem !important;
+}
+.details div svg {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.share:hover .tooltip {
+  display: flex !important;
+}
+
+.share {
+  position: relative;
+  bottom: 2px;
+}
+
+.comment {
+  position: relative;
+}
+
+.comment span {
+  font-size: 7px;
+  top: -5px;
+  left: -4px;
+  border-radius: 100%;
+  padding: 0.1rem 0.2rem 0;
+  background-color: rgb(52, 24, 14);
+  position: absolute;
+}

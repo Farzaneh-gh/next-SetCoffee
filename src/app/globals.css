@@ -153,6 +153,8 @@ body::-webkit-scrollbar-thumb {
   max-width: 1200px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
+margin-top: 5rem;
+margin-bottom: 5rem;
 
 
 }
