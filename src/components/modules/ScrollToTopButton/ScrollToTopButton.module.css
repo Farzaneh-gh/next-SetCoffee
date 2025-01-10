@@ -1,0 +1,26 @@
+.visible_button,
+.button {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: rgb(52, 24, 14);
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 1rem;
+  bottom: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+  transition-duration: 200ms;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button {
+  display: none !important;
+}

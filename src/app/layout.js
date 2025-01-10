@@ -17,7 +17,8 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr">
       <body className={inter.className}>
         <AosInit />
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }

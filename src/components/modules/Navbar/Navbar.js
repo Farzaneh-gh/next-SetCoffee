@@ -1,13 +1,28 @@
-import React from 'react'
-import Link from 'next/link'
-import styles from './Navbar.module.css'
-import Image from 'next/image'
+"use client";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import styles from "./Navbar.module.css";
+import Image from "next/image";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { FaRegHeart } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 function Navbar() {
+  const [fixedNavbar, setFixedNavbar] = useState(false);
+  useEffect(() => {
+    const fixedNavbarHandler = () => {
+      if(window.scrollY>100){
+        setFixedNavbar(true)
+      }else{
+        if(window.scrollY<100){
+        setFixedNavbar(false)
+      }
+      }
+    }
+    window.addEventListener("scroll",fixedNavbarHandler);
+    return ()=>window.removeEventListener("scroll",fixedNavbarHandler)
+  },[])
   return (
-    <nav className={styles.navbar}>
+    <nav className={fixedNavbar?styles.fixed_navbar:styles.navbar}>
       <main>
         <div className={styles.logo}>
           <Image
@@ -71,4 +86,4 @@ function Navbar() {
   );
 }
 
-export default Navbar
+export default Navbar;
