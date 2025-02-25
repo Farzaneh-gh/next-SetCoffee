@@ -1,0 +1,19 @@
+.login_container{
+     width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.second_column{
+background-image: url("https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+}
+
+.first_column{
+    position: relative;
+    background: linear-gradient(rgb(237, 230, 234), rgb(237, 230, 234));
+}
+

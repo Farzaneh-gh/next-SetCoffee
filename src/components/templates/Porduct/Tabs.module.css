@@ -1,0 +1,26 @@
+.tabs{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    justify-content: center;
+}
+.tabs span {
+    padding-top: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.selectedTab{
+    border-top: 2px solid black;
+    color:black;
+    font-weight: 600;
+}
+
+.tabs span:hover{
+     border-top: 2px solid black;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+

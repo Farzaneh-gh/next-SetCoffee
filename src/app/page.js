@@ -6,10 +6,13 @@ import Articles from "@/components/templates/Index/Articles/Articles";
 import Banner from "@/components/templates/Index/Banner/Banner"
 import Latest from "@/components/templates/Index/Latest/Latest";
 import Promote from "@/components/templates/Index/Promote/Promote";
-export default function Home() {
+import { authUser } from "@/utils/auth";
+export default  async function  Home() {
+ const user=await authUser();
+
   return (
     <>
-      <Navbar />
+      <Navbar isLogged={user}/>
       <Banner />
       <Latest />
       <Promote />

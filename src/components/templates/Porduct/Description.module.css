@@ -1,0 +1,29 @@
+.description_container{
+  
+    max-width: 1200px;
+    margin: 0 auto;
+      margin-top: 2rem;
+      color:black;
+}
+
+.description_title{
+    margin-bottom: 1rem;
+}
+
+.description_container p{
+    line-height: 1.3rem;
+}
+.description_info p{
+    margin-top: 1rem;
+     font-weight: 500;
+}
+
+.description_info p:first-child{
+    font-weight: bold;
+}
+
+.description_text p{
+    margin-top: 1rem;
+    line-height: 1.4rem;
+   
+}

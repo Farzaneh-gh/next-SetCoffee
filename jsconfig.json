@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/configs/*":["./configs/*"],
+      "@/models/*":["./models/*"],
+      "@/src/utils/*":["./src/utils/*"],
+      "@/validators/*":["./validators/*"],
+
     }
   }
 }

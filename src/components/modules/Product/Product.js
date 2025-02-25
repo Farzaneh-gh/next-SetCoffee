@@ -1,9 +1,12 @@
-import React from 'react'
-import styles from './Product.module.css'
+import React from "react";
+import styles from "./Product.module.css";
 import { CiSearch, CiHeart } from "react-icons/ci";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import Link from 'next/link';
-function Product() {
+import Link from "next/link";
+function Product({ product }) {
+  if (!product || Object.keys(product).length === 0) {
+    return 
+  }
   return (
     <div className={styles.container}>
       <div className={styles.product_image}>
@@ -28,22 +31,24 @@ function Product() {
         </div>
       </div>
       <div className={styles.details}>
-        <Link href="/" className={styles.title}>
-          SETpresso Coffee Capsules Compatible with Nespresso Machines (RED) -
-          Pack of 10 - LIMITED EDITION
+        <Link href={`/product/${product._id}`} className={styles.title}>
+          {product.name}
+          <p>{product.shortDescription}</p>
         </Link>
         <div className={styles.rating}>
-          {" "}
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaRegStar />
+          {[...Array(Math.min(5, Math.max(0, product.score || 0)))].map(
+            (_, index) => (
+              <FaStar key={index} />
+            )
+          )}
+          {[...Array(Math.max(0, 5 - (product.score || 0)))].map((_, index) => (
+            <FaRegStar key={index} />
+          ))}
         </div>
-        <span>80$</span>
+        <span>{product.price}</span>
       </div>
     </div>
   );
 }
 
-export default Product
+export default Product;

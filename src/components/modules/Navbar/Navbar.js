@@ -6,7 +6,7 @@ import Image from "next/image";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { FaRegHeart } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-function Navbar() {
+function Navbar({isLogged}) {
   const [fixedNavbar, setFixedNavbar] = useState(false);
   useEffect(() => {
     const fixedNavbarHandler = () => {
@@ -54,7 +54,7 @@ function Navbar() {
           <li>
             <Link href="/rules">Rules</Link>
           </li>
-          <li>
+          {isLogged ?( <li>
             <div className={styles.dropdown}>
               <div className={styles.dropdown_button}>
                 <Link href="/login">User Account</Link>
@@ -68,7 +68,10 @@ function Navbar() {
                 <Link href="/p-user/account-details">Account Details</Link>
               </div>
             </div>
-          </li>
+          </li>):(<li>
+            <Link href="/login-register">Login</Link>
+          </li>)}
+         
         </ul>
 
         <div className={styles.navbar_icons}>

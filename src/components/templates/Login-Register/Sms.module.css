@@ -1,0 +1,82 @@
+.sms_container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-color: #fff;
+  width: 380px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  color: black;
+  padding: 30px 25px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.form{
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+
+}
+
+.sms_container p {
+  font-weight: 600;
+}
+
+.code_title {
+  font-size: 13px;
+  color: #6d6d6d;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.number {
+  font-size: 13px;
+  color: #6d6d6d;
+  white-space: nowrap;
+  display: block;
+}
+
+.input{
+    width: 100%;
+   width: 100%;
+  line-height: 2rem;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid black;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  background-color: white;
+}
+
+.btn {
+  width: 100%;
+  background-color: rgb(52, 24, 14);
+  outline: none;
+  border: none;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.send_again_code{
+     color: #6d6d6d;
+     font-size: .9rem;
+     cursor: pointer;
+}
+
+.redirect_to_home {
+  position: relative;
+  bottom: -5rem;
+ 
+  cursor: pointer;
+  font-size: 13px;
+  color: rgb(52, 24, 14);
+}

@@ -1,0 +1,16 @@
+.product_breadcrumb{
+    display: flex;
+    justify-content: left;
+    align-items: left   ;
+    font-size: .9rem;
+    padding: 1rem 0;
+}
+
+.product_breadcrumb a{
+    color:gray
+}
+
+.product_breadcrumb span {
+    margin-left: .3rem;
+    margin-right: .3rem;
+}

@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: black;
+  max-width: 1222px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  margin-left: auto;
+}
+
+.container section {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  color: black;
+  line-height: 2rem;
+  gap: 110px;
+  padding: 40px 0;
+  color: gray;
+}
+
+.container section div p {
+  font-size: 36px;
+  line-height: 2.4rem;
+}
+
+.container section div {
+  display: grid;
+  gap: 5px;
+  color: black;
+}
+
+.container span {
+  font-size: 24px;
+}
+.main p {
+  margin-top: 20px;
+  line-height: 1.5rem;
+
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 90px;
+  margin-top: 50px;
+
+}
+
+.main span {
+  font-size: 24px;
+}
+
+.title {
+  margin: 10px 0 !important;
+  font-size: 35px;
+}

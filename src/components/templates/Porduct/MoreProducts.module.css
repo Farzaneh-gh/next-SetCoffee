@@ -1,0 +1,12 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    color:black
+}
+
+.title{
+    color:black;
+    font-weight: 700;
+    font-size: 1.2rem;
+}

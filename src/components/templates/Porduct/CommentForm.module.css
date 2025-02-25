@@ -1,0 +1,105 @@
+.title {
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.rating {
+  padding-left: 1rem;
+  display: flex;
+
+}
+.rating svg{
+    font-size: 1.2rem;
+   margin-left: .1rem;
+   color:gray
+}
+.rating svg:hover,
+.rating svg:hover ~ svg{
+    color:orange
+}
+
+.form {
+  color: black;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form textarea {
+  border-radius: 5px;
+  background: white;
+  font-family: shabnam;
+  color: black;
+  border: 1px solid rgb(103 103 103 / 34%);
+  padding: 1rem;
+  resize: none;
+}
+.container {
+  color: black;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.group input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  line-height: 1.5rem;
+  height: 35px;
+  width: 90%;
+  padding: 0.5rem;
+}
+
+.checkbox_container {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+.checkbox_container p {
+  font-size: 0.9rem;
+}
+
+.checkbox_container input[type="checkbox"] {
+  transform: scale(1.5);
+  margin: 10px;
+  border: 1px solid #757474;
+  border-radius: 1px;
+  vertical-align: sub;
+}
+.checkbox input:checked {
+  background-color: rgb(52, 24, 14);
+  border-color: rgb(52, 24, 14);
+}
+
+.checkbox input:checked:focus,
+.checkbox input:checked:hover {
+  box-shadow: 0 0 0 3px #d9d9d9;
+  border-color: rgb(52, 24, 14);
+}
+.container button {
+  width: fit-content;
+  background-color: rgb(0, 137, 121);
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+
+.container button:hover{
+    background-color: rgb(52, 24, 14);
+    color:#fff;
+}
+.container button:disabled{
+  background-color: gray;
+}

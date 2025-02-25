@@ -1,0 +1,28 @@
+.columns{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem
+}
+
+.subtitle{
+    color:black;
+    font-size: 1rem;
+    font-weight: 500 ;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+.container{
+    margin-top: 2rem;
+}
+.container hr{
+    margin: 1rem 0;
+}
+
+.title{
+    color:black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.first_column{
+    padding: 0 1rem;
+}

@@ -1,0 +1,18 @@
+.container {
+  overflow: auto;
+}
+
+.product_container {
+display: grid;
+gap:50px;
+grid-template-columns: 36% auto;
+}
+
+.contents {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 160px;
+  color: black;
+  padding-top: 25px;
+  padding-bottom: 5rem;
+}

@@ -1,9 +1,11 @@
-import React from 'react'
-import styles from './Latest.module.css'   
-import Product from '@/components/modules/Product/Product' 
-import Link from 'next/link'
+import React from "react";
+import styles from "./Latest.module.css";
+import Product from "@/components/modules/Product/Product";
+import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa6";
-function Latest() {
+import { getAllPrdoucts } from "@/utils/product";
+async function Latest() {
+  const products = await getAllPrdoucts();
   return (
     <div className="container">
       <section className={styles.header}>
@@ -14,17 +16,13 @@ function Latest() {
         </Link>
       </section>
       <main className={styles.Products} data-aos="fade-up">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {products?.map((product) => (
+          <Product key={product._id} product={product} />
+        ))}
+      
       </main>
     </div>
   );
 }
 
-export default Latest
+export default Latest;

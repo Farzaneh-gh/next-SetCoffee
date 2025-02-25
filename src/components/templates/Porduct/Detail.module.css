@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.rating svg {
+  color: orange;
+  font-size: 1.4rem;
+}
+.prices {
+  font-weight: bold;
+  font-size: 1.5rem;
+    color: rgb(52, 24, 14);
+}
+
+.description {
+  color: gray;
+  line-height: 1.3rem;
+}
+.stock {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.stock svg {
+   font-size: 1.5rem;
+  color:black;
+  font-weight: 900;
+}
+.cart{
+    display: flex;
+    flex-direction: row;
+    gap:1rem
+}
+.cart button{
+   background-color: rgb(0, 137, 121);
+   cursor: pointer;
+   padding: .5rem 1rem;
+   outline: none;
+   border: none;
+   font-size: 1rem;
+}
+.cart button:hover{
+     background-color: rgb(113, 29, 28);
+}
+.quantity{
+    display: flex;
+    width: fit-content;
+    border: 1px solid black;
+
+}
+
+.quantity span:not(:last-child){
+    border-right: 1px solid black;
+      
+}
+.quantity span{
+  padding: .5rem;
+}
+
+.wishlist{
+    display: flex;
+    gap:1rem;
+    font-size: .9rem;
+}
+
+.wishlist div{
+    display: flex;
+    align-items: center;
+    gap:.2rem
+}
+
+.wishlist div svg{
+    font-size: 1.2rem;
+}
+.wishlist div span:hover{
+    cursor: pointer;
+    color:gray;
+    
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+.share {
+  display: flex;
+  margin-top: 2rem;
+  gap: 8px;
+}
+.share svg {
+  font-size: 1.3rem;
+}
