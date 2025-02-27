@@ -57,14 +57,14 @@ function Navbar({isLogged}) {
           {isLogged ?( <li>
             <div className={styles.dropdown}>
               <div className={styles.dropdown_button}>
-                <Link href="/login">User Account</Link>
+                
                 <IoIosArrowDown className={styles.dropdown_icon} />
               </div>
               <div className={styles.dropdown_content}>
                 <Link href="/p-user/orders">Orders</Link>
                 <Link href="/p-user/tikets">tikets</Link>
                 <Link href="/p-user/comments">Comments</Link>
-                <Link href="/p-user/wishlist">Wishlist</Link>
+                <Link href="/wishlist">Wishlist</Link>
                 <Link href="/p-user/account-details">Account Details</Link>
               </div>
             </div>

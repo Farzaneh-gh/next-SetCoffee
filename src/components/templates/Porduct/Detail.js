@@ -6,6 +6,7 @@ import { IoCheckmark } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { TbSwitch3 } from "react-icons/tb";
 import { FaTelegram, FaLinkedinIn, FaPinterest } from "react-icons/fa";
+import AddToWishlist from './AddToWishlist';
 function Detail({productData}) {
   const acceptedComments = productData.comments.filter(
     (comment) => comment.isAccept
@@ -42,10 +43,7 @@ function Detail({productData}) {
           <button>Add to Cart</button>
         </div>
         <div className={styles.wishlist}>
-          <div>
-            <CiHeart />
-            <span> Add to Wishlist</span>
-          </div>
+          <AddToWishlist product={productData._id}/>
           <div>
             <TbSwitch3 />
             <span>Compare</span>

@@ -1,0 +1,46 @@
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.subheading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.list {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.contact {
+  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.footer {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  margin-top: 30px;
+}
