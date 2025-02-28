@@ -4,6 +4,14 @@
     grid-template-columns: 1fr 1fr;
     gap:2rem;
     padding: 1rem;
-    padding-top: 3rem;
+    padding-top: 11rem;
     margin: 0 auto;
+}
+
+.map_container{
+    width: 100%;
+   display: flex;
+   margin-top: 2rem;
+   padding: 2rem;
+   gap:2rem
 }

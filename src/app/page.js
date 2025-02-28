@@ -7,18 +7,20 @@ import Banner from "@/components/templates/Index/Banner/Banner"
 import Latest from "@/components/templates/Index/Latest/Latest";
 import Promote from "@/components/templates/Index/Promote/Promote";
 import { authUser } from "@/utils/auth";
+
 export default  async function  Home() {
  const user=await authUser();
 
   return (
     <>
-      <Navbar isLogged={user}/>
+
+     <Navbar isLogged={user}/>
       <Banner />
       <Latest />
       <Promote />
       <Articles />
       <Footer />
-      <ScrollToTopButton />
+      <ScrollToTopButton /> 
     </>
   );
 }

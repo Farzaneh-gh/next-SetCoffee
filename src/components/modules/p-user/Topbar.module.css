@@ -1,0 +1,54 @@
+.topbar {
+  background-color: rgb(17, 17, 17);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #711d1c;
+  padding: 1rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile p {
+  color: white;
+}
+
+.name {
+  font-weight: 700;
+}
+.profile .role {
+  color: gray;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+.profile img {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  position: relative;
+}
+
+.input input {
+  border: none;
+  outline: none;
+  background-color: white;
+  border-radius: 15px;
+  height: 40px;
+  width: 300px;
+  padding-left: 1rem;
+}
