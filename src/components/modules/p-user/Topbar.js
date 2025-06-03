@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import styles from "./topbar.module.css";
 import { IoIosSearch, IoIosNotifications } from "react-icons/io";
@@ -5,7 +6,7 @@ import Modal from "./Modal";
 const Topbar = () => {
   const [showNotification, setShowNotification] = useState(false);
   const [showModal, setShowModal] = useState(false);
- 
+
   const handelShowModal = () => {
     setShowNotification(false);
     setShowModal(true);

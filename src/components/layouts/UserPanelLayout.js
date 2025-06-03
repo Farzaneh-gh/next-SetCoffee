@@ -5,7 +5,9 @@ import Sidebar from "@/components/modules/p-user/Sidebar";
 import { authUser } from "@/utils/serverHelper";
 const UserPanelLayout = ({ children }) => {
   const user = authUser();
-  if(!user) {redirect("/login-register");}
+  if (!user) {
+    redirect("/login-register");
+  }
   return (
     <div className={styles.container}>
       <Sidebar />
