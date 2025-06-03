@@ -5,7 +5,7 @@ import Login from "@/components/templates/Login-Register/Login";
 import styles from "@/styles/login-register.module.css";
 import { authTypes } from "@/utils/constant";
 
-const page=()=> {
+const Page=()=> {
   const [authType, setAuthType] = useState(authTypes.LOGIN);
   const showLoginForm = () => {
     setAuthType(authTypes.LOGIN);
@@ -27,4 +27,4 @@ const page=()=> {
   );
 }
 
-export default page;
+export default Page;

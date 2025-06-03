@@ -71,7 +71,7 @@ export const Table = () => {
             cart.
           </span>
           <span>
-            You will find many interesting products on the "Shop" page.
+            You will find many interesting products on the Shop page.
           </span>
           <div>
             <Link href="/">Back to Shop</Link>
