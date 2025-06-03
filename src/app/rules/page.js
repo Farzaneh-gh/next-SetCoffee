@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '@/components/modules/Navbar/Navbar' 
 import BreadCrumb from '@/components/modules/Breadcrumb/BreadCrumb'
 import Footer from '@/components/modules/Footer/Footer'
-import { authUser } from '@/utils/auth'
+import { authUser } from "@/utils/serverHelper";
 import styles from "@/styles/rules.module.css";
 const page = () => {
     const user=authUser();

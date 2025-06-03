@@ -1,11 +1,12 @@
 "use client";
+import React, { useState } from "react";
 import Register from "@/components/templates/Login-Register/Register";
 import Login from "@/components/templates/Login-Register/Login";
 import styles from "@/styles/login-register.module.css";
 import { authTypes } from "@/utils/constant";
-import React from "react";
-function page() {
-  const [authType, setAuthType] = React.useState(authTypes.LOGIN);
+
+const page=()=> {
+  const [authType, setAuthType] = useState(authTypes.LOGIN);
   const showLoginForm = () => {
     setAuthType(authTypes.LOGIN);
   };

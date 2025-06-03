@@ -1,0 +1,77 @@
+.container{
+ border-bottom: 2px solid #ccc;
+  width: 100%;
+ vertical-align: middle;
+ text-align: center;
+}
+
+.container td{
+  vertical-align: middle;
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.container p{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    color: black;
+}
+
+
+
+.quantity_container{
+
+
+border: 1px solid #ccc;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 0.5rem;
+}
+.quantity_container button{
+   
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #711d1c;
+    color: white;
+   
+}
+
+.quantity_container button:hover{
+    cursor: pointer;
+    color: #711d1c;
+  background-color:gray;
+    transition: all 0.3s ease-in-out;
+  
+}
+
+.quantity_container button:first-child{
+    border-right: 1px solid #ccc;
+}
+
+.quantity_container button:last-child{
+    border-left: 1px solid #ccc;
+}
+
+.delete_icon{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color:gray;
+}
+
+.delete_icon:hover{
+    color: #711d1c;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}

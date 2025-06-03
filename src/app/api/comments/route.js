@@ -2,7 +2,11 @@ import connectToDB from "@/configs/db";
 import commentModel from "@/models/Comment";
 import productModel from "@/models/Product";
 import { validateEmail } from "@/validators/auth";
+import { authUser } from "@/utils/serverHelper";
 export async function POST(req) {
+
+
+
   try {
     const reqBody = await req.json();
     const { username, body, email, score, productId } = reqBody;
@@ -11,6 +15,7 @@ export async function POST(req) {
     if (!isValidEmail) {  
       return Response.json({ message: "Email is not valid" }, { status: 400 });
     }
+    const user=await authUser();
     connectToDB();
     const comment = await commentModel.create({
       username,
@@ -18,6 +23,7 @@ export async function POST(req) {
       email,
       score,
       productId,
+      userId:user?user._id:""
     });
     const updatedProduct = await productModel.findOneAndUpdate(
       {

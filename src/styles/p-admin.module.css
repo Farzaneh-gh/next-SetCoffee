@@ -1,0 +1,24 @@
+.boxes {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.dashboard_charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.dashboard_charts section {
+  background: #711d1c19;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.dashboard_charts section p {
+  margin-bottom: 10px;
+  text-align: center;
+}

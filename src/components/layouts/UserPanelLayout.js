@@ -1,16 +1,19 @@
-"use client";
 import React from "react";
-import dynamic from "next/dynamic";
-
+import styles from "./UserPanelLayout.module.css";
+import Topbar from "@/components/modules/p-user/Topbar";
+import Sidebar from "@/components/modules/p-user/Sidebar";
+import { authUser } from "@/utils/serverHelper";
 const UserPanelLayout = ({ children }) => {
-  const TopBar = dynamic(() => import("../modules/p-user/TopBar"), {
-    ssr: false,
-  });
+  const user = authUser();
+  if(!user) {redirect("/login-register");}
   return (
-    <>
-      <TopBar />
-      <div>{children}</div>
-    </>
+    <div className={styles.container}>
+      <Sidebar />
+      <div className={styles.content}>
+        <Topbar />
+        <div>{children}</div>
+      </div>
+    </div>
   );
 };
 

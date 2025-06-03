@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+    max-width: 300px;
+    align-items: center;
+}
+
+.image{
+    object-fit: cover;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.price{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+.price svg{
+     color: orange;
+}
+.remove{
+     width: 100%;
+  padding: 0.5rem 1rem;
+  color: white;
+  transition: 1s all ease-in-out;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 1rem;
+  background-color: #711d1c;
+  border: 0;
+  outline: 0;
+}
+

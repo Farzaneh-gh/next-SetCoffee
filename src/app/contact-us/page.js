@@ -1,3 +1,5 @@
+
+"use client"
 import React from 'react'
 import styles from '@/styles/contact-us.module.css'
 import Navbar from '@/components/modules/Navbar/Navbar'

@@ -1,0 +1,50 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.title::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: brown;
+  position: absolute;
+  z-index: -1;
+}
+.container {
+  margin: 2rem;
+}
+
+.title h1 {
+  background-color: white;
+  padding: 0 0.5rem;
+  margin: 0 2rem;
+  font-size: 2rem;
+}
+
+.title a {
+  background-color: #ffffff;
+  color: #711d1c;
+  font-size: 1rem;
+  padding:0.5rem;
+  margin-right: 2rem;
+  border-radius: 20px;
+  border: 1px solid #711d1c;
+  align-self: flex-end;
+
+ 
+}
+
+.empty {
+  width: 100%;
+  border-radius: 5px;
+  border-radius: 5px;
+  background-color: #711d1c21;
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #711d1c;
+}

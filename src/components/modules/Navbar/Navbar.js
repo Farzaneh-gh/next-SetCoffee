@@ -22,7 +22,7 @@ function Navbar({isLogged}) {
     return ()=>window.removeEventListener("scroll",fixedNavbarHandler)
   },[])
   return (
-    <nav className={fixedNavbar?styles.fixed_navbar:styles.navbar}>
+    <nav className={fixedNavbar ? styles.fixed_navbar : styles.navbar}>
       <main>
         <div className={styles.logo}>
           <Image
@@ -54,28 +54,31 @@ function Navbar({isLogged}) {
           <li>
             <Link href="/rules">Rules</Link>
           </li>
-          {isLogged ?( <li>
-            <div className={styles.dropdown}>
-              <div className={styles.dropdown_button}>
-                <Link href="/login">User Account</Link>
-                <IoIosArrowDown className={styles.dropdown_icon} />
+          {isLogged ? (
+            <li>
+              <div className={styles.dropdown}>
+                <div className={styles.dropdown_button}>
+                  <Link href="/login">User Account</Link>
+                  <IoIosArrowDown className={styles.dropdown_icon} />
+                </div>
+                <div className={styles.dropdown_content}>
+                  <Link href="/p-user/orders">Orders</Link>
+                  <Link href="/p-user/tikets">tikets</Link>
+                  <Link href="/p-user/comments">Comments</Link>
+                  <Link href="/wishlist">Wishlist</Link>
+                  <Link href="/p-user/account-details">Account Details</Link>
+                </div>
               </div>
-              <div className={styles.dropdown_content}>
-                <Link href="/p-user/orders">Orders</Link>
-                <Link href="/p-user/tikets">tikets</Link>
-                <Link href="/p-user/comments">Comments</Link>
-                <Link href="/wishlist">Wishlist</Link>
-                <Link href="/p-user/account-details">Account Details</Link>
-              </div>
-            </div>
-          </li>):(<li>
-            <Link href="/login-register">Login</Link>
-          </li>)}
-         
+            </li>
+          ) : (
+            <li>
+              <Link href="/login-register">Login</Link>
+            </li>
+          )}
         </ul>
 
         <div className={styles.navbar_icons}>
-          <Link href="/card">
+          <Link href="/cart">
             <HiMiniShoppingCart />
             <span>1</span>
           </Link>

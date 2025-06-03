@@ -1,0 +1,48 @@
+.container {
+  margin: 2rem;
+}
+
+.table {
+  width: 100%;
+  background-color: #f2f7fd;
+  border-collapse: collapse;
+  border-radius: 8px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #e3eaf5;
+}
+
+.no_check {
+  font-size: 13px;
+  background: #000000;
+  padding: 0.4rem 0.7rem;
+  width: -webkit-fill-available;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  background: #711d1c;
+}
+
+.btn {
+  font-size: 13px;
+  background: #000000;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  width: -webkit-fill-available;
+}
+
+.rating svg{
+    color:orange
+}

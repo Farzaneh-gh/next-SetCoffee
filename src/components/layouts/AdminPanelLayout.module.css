@@ -1,0 +1,9 @@
+.conatiner {
+  background: white;
+  width: 100%;
+  direction: ltr;
+  height: 100vh;
+  color: black;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}

@@ -47,7 +47,7 @@ export async function POST(req) {
       { status: 422 }
     );
   }
-  console.log(password);
+ 
   const hashedPassword = await hashPassword(password);
   const userRole = await userModel.find({});
   const user = userModel.create({

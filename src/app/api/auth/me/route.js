@@ -19,7 +19,7 @@ export async function GET(req) {
     }
     await connectToDB();
     const user = await userModel.findOne({ email: tokenPayload.email });
- 
+
     if (!user) {
            
       return Response.json({ message: "Unauthorized" }, { status: 401 });

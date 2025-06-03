@@ -42,7 +42,7 @@ const CommentForm = ({ productId }) => {
       }
       if (response.status === 201) {
         const data = await response.json();
-        console.log(data);
+   
         showSwal("comment submitted successfully", "success", "ok");
         setBody("");
         setUsername("");

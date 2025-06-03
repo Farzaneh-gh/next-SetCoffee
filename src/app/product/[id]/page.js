@@ -6,7 +6,7 @@ import Footer from "@/components/modules/Footer/Footer";
 import Detail from "@/components/templates/Porduct/Detail";
 import MoreProducts from "@/components/templates/Porduct/MoreProducts";
 import Tabs from "@/components/templates/Porduct/Tabs";
-import { authUser } from "@/utils/auth";
+import { authUser } from "@/utils/serverHelper";
 import { getProduct,getRelatedProducts } from "@/utils/product";
 const page = async ({ params }) => {
   const { id } = await params

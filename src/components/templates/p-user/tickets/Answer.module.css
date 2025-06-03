@@ -1,0 +1,74 @@
+.user_container {
+  background-color: brown;
+  color: white;
+  width: 50%;
+  min-height: 200px;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+
+.user img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user div {
+  align-self: center;
+  font-size: 1rem;
+}
+
+.user div p {
+  margin-bottom: 0.5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_answer {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+.admin_answer {
+  background-color: #711d1c;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+
+}
+.admin_container {
+  background-color: #f9f9f9;
+  color: black;
+  border: #711d1c 3px solid;
+  width: 50%;
+  min-height: 200px;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 3rem;
+  margin-left: auto;
+}
+
+.role {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: gray;
+}

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { Content } = require("next/font/google/index.js");
 require("./Comment.js");
 
 const schema = new mongoose.Schema({
@@ -15,9 +16,14 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  image: {
+  imageSrc: {
     type: String,
     required: false,
+  },
+  image: {
+    data: Buffer,
+    contentType: String,
+   
   },
   price: {
     type: Number,

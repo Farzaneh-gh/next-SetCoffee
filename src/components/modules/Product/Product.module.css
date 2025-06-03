@@ -80,7 +80,10 @@ visibility:visible;
   text-align: center;
   font-weight: var(--font-medium);
 }
-
+.product_image{
+  width: 100%;
+  height: 100%;
+}
 .product_image:hover .button {
   visibility: visible;
   top: 50%;

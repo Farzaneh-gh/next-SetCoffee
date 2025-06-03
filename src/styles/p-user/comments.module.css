@@ -1,0 +1,38 @@
+.container{
+    padding: 2rem;
+    color:black;
+    width: 100%;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+   
+}
+.title p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:.5rem
+}
+.title p::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+     background-color: #711d1c;
+    position: relative;
+    display: inline-block;
+    padding-left: .5rem;
+    
+}
+.title p::before{
+    content: "";
+    width: 100%;
+    height: 4px;
+     background-color: #711d1c;
+    position: relative;
+    display: inline-block;
+    
+}
+

@@ -24,7 +24,7 @@ function AddToWishlist({ product }) {
   useEffect(() => {
     if (!user || !product) return;
     const isAddedInWishlist = async () => {
-      const res = await fetch(`/api/wishList/${user._id}/${product}`);
+      const res = await fetch(`/api/wishList/${product}`);
       if (res.status === 200) {
         setAdded(true);
       }

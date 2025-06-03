@@ -45,7 +45,7 @@ const Form = () => {
       return;
     }
     if (phone.trim() && !validatePhone(phone)) {
-      console.log(phone);
+
         setErrors((prevErrors) => ({
           ...prevErrors,
           phone: "Phone number is not valid",

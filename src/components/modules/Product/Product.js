@@ -1,19 +1,25 @@
+
 import React from "react";
 import styles from "./Product.module.css";
 import { CiSearch, CiHeart } from "react-icons/ci";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Link from "next/link";
+
 function Product({ product }) {
+  let imageSrc =
+    "https://set-coffee.com/wp-content/uploads/2021/10/041-430x430.png";
+  if (product.image?.data && product.image?.contentType) {
+    const base64 = Buffer.from(product.image.data).toString("base64");
+    imageSrc = `data:${product.image.contentType};base64,${base64}`;
+  }
+
   if (!product || Object.keys(product).length === 0) {
-    return 
+    return;
   }
   return (
     <div className={styles.container}>
       <div className={styles.product_image}>
-        <img
-          src="https://set-coffee.com/wp-content/uploads/2021/10/041-430x430.png"
-          alt="product"
-        />
+        <img src={imageSrc} alt="product" />
         <div className={styles.icons}>
           <Link href="/" className={styles.link}>
             {" "}
@@ -47,6 +53,7 @@ function Product({ product }) {
         </div>
         <span>{product.price}</span>
       </div>
+   
     </div>
   );
 }

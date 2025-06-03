@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 require("./Product.js");
+require("./User.js");
 
 const schema=new mongoose.Schema({
     username:{
@@ -27,10 +28,42 @@ const schema=new mongoose.Schema({
         type:Boolean,
         default:false
     },
+    isPending:{
+        type:Boolean,
+        default:true
+    },
     productId:{
         type:mongoose.Types.ObjectId,
         ref:"Product"
+    },
+    userId:{
+        type:mongoose.Types.ObjectId,
+       required:false,
+         ref:"User"
+    },
+    answer:{
+        type:String,
+        required:false
+    },
+    answerDate:{
+        type:Date,
+        required:false
+    },
+    answerAdminId:{
+        type:mongoose.Types.ObjectId,
+        required:false,
+        ref:"User"
+    },
+    hasAnswered:{
+        type:Boolean,
+        default:false
+    },
+    isDeleted:{
+        type:Boolean,
+        default:false
     }
+
+
 
 
 })

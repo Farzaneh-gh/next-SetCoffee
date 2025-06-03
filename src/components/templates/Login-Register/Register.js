@@ -9,6 +9,7 @@ import {
   validatePassword,
   validatePhone,
 } from "@/validators/auth";
+import { useRouter } from "next/navigation";
 function Register({ showLoginForm }) {
   const [isRegisterWithPass, setIsRegisterWithPass] = useState(false);
   const [isRegisterWithOtp, setIsRegisterWithOtp] = useState(false);
@@ -16,6 +17,7 @@ function Register({ showLoginForm }) {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   const handelRegisterWithPass = (e) => {
     e.preventDefault();
@@ -24,6 +26,44 @@ function Register({ showLoginForm }) {
       setIsRegisterWithOtp(false);
     } else {
       signup();
+    }
+  };
+  const showOtpForm = async(e) => {
+    e.preventDefault();
+    if (!name.trim()) {
+      return showSwal("Enter valid Name", "error", "OK");
+    }
+
+    if (email) {
+      const verifyEmail = validateEmail(email);
+      if (!verifyEmail)
+        return showSwal("Enter valid Email Address", "error", "OK");
+    }
+
+    const verifyPhon = validatePhone(phone);
+    if (!verifyPhon) {
+      return showSwal("Enter valid phone number", "error", "OK");
+    }
+    try {
+      const response = await fetch("/api/auth/signup-sms/send", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ name, phone, email }),
+      });
+      if (response.status === 201) {
+        setIsRegisterWithOtp(true);
+        setIsRegisterWithPass(false);
+        return;
+      }
+      if (response.status=== 409) {
+        console.log("response", response.status);
+        return showSwal("Phone number or Email is exist", "error", "ok");
+      }
+     else return showSwal("Failed to send code, please try again", "error", "ok");
+    } catch (err) {
+      return showSwal("Failed to send code, please try again", "error", "ok");
     }
   };
 
@@ -58,23 +98,49 @@ function Register({ showLoginForm }) {
     if (res.status === 201) {
       showSwal("User registerd successfully", "success", "Enter");
     }
-    if (res.status === 422 || res.status===204) {
+    if (res.status === 422 || res.status === 204) {
       const responseData = await res.json();
       const message = responseData.message;
       showSwal(message, "error", "OK");
     }
   };
 
-  const handelRegisterWithOtp = (e) => {
+  const handelRegisterWithOtp = async (e, code) => {
     e.preventDefault();
-    setIsRegisterWithOtp(true);
-    setIsRegisterWithPass(false);
+
+    if (!code.trim()) {
+      return showSwal("Enter valid code", "error", "OK");
+    }
+
+    const userData = { name, phone, email, code };
+    const res = await fetch("/api/auth/signup-sms/verify", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+    if (res.status === 201) {
+      swal(
+        "User registerd successfully",
+        "success",
+        "OK"
+      ).then(() => router.push("/"));
+    }
+    if (res.status === 409 || res.status === 204) {
+      const responseData = await res.json();
+      const message = responseData.message;
+      showSwal(message, "error", "OK");
+    }
   };
 
   return (
     <>
       {isRegisterWithOtp ? (
-        <Sms hideOtpForm={() => setIsRegisterWithOtp(false)} />
+        <Sms
+          hideOtpForm={() => setIsRegisterWithOtp(false)}
+          handleSubmitOTP={handelRegisterWithOtp}
+        />
       ) : (
         <section className={styles.login_container}>
           <form>
@@ -106,11 +172,7 @@ function Register({ showLoginForm }) {
               />
             )}
 
-            <button
-              type="submit"
-              className={styles.btn}
-              onClick={handelRegisterWithOtp}
-            >
+            <button type="submit" className={styles.btn} onClick={showOtpForm}>
               Sign Up with Verification Code
             </button>
 

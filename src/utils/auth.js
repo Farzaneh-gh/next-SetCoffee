@@ -1,8 +1,8 @@
+import connectToDB from "@/configs/db";
 import { hash, compare } from "bcryptjs";
 import { sign, verify } from "jsonwebtoken";
 import { cookies } from "next/headers";
-import userModel from "@/models/User";
-import connectToDB from "@/configs/db";
+
 
 const hashPassword = async (pass) => {
   const hashedPssword = await hash(pass, 12);
@@ -37,22 +37,5 @@ const generateRefreshAccessToken=(data)=>{
     return refreshToken
 }
 
-const authUser=async()=>{
-  const cookie=await cookies();
-  const token=cookie.get("token");
-  if(!token){
-    return false
-  }
-  const tokenPayload=verifyAccessToken(token.value);
-  if(!tokenPayload){
-    return false
-  }
-  await connectToDB();
-  const userData=await userModel.findOne({email:tokenPayload.email});
-  if(!userData){
-    return false
-  }
- return JSON.parse(JSON.stringify(userData))
 
-}
-export { hashPassword,verifyPassword,generateAccessToken,generateRefreshAccessToken,verifyAccessToken,authUser };
+export { hashPassword,verifyPassword,generateAccessToken,generateRefreshAccessToken,verifyAccessToken };

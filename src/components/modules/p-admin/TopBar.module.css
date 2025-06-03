@@ -1,0 +1,147 @@
+.container{
+ background-color: black;
+  border-bottom: 6px solid#711d1c;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: white;
+  position: relative;
+}
+
+
+.avatar {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+
+.user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.role {
+  color: gray;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.name {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search_input input {
+  background: white;
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: 300px;
+}
+.search_input {
+  position: relative;
+}
+
+.search_input .icon_container {
+  background-color: #711d1c;
+  color: white;
+  position: absolute;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  font-size: 1.5rem;
+  top: 4px;
+  border-radius: 100%;
+  padding: 0px 5px;
+}
+
+.notification {
+  background-color: #711d1c;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  background-color: white;
+  color: #711d1c;
+  font-size: 0.7rem;
+  top: -3px;
+  right: -8px;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0 2px;
+}
+
+.notification_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+  z-index: 200;
+  background-color: #711d1c;
+  font-size: .8rem;
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 10px;
+  box-shadow: inset;
+}
+.notification_container button{
+    padding: .3rem;
+    background-color: blue;
+    color:white;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.notification_container button:hover{
+    background-color: gray;
+    color:balck;
+}
+.notification_container p{
+    cursor: pointer;
+}
+.notification_container p:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+.notification_container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: hsla(0, 5%, 37%, 0.7);
+  z-index: 100;
+}
+

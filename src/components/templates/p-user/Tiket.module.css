@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    background-color:#711d1c !important;
+    color:white;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    gap:1rem
+}
+
+.container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.department{
+    background-color: white;
+    color: #711d1c;
+    padding:.5rem;
+    border-radius: 5px;
+}
