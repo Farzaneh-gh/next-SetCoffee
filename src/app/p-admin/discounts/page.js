@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import AdminPanelLayout from "@/components/layouts/AdminPanelLayout";
 import styles from "@/styles/p-admin/discounts.module.css";
@@ -6,6 +8,7 @@ import connectToDB from "@/configs/db";
 import ProductModel from "@/models/Product";
 import DiscountModel from "@/models/Discount";
 import Table from "@/components/templates/p-admin/discounts/Table";
+
 const page = async () => {
   await connectToDB();
   const products = await ProductModel.find({}, "-__v");
