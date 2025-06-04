@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./topbar.module.css";
+import styles from "./Topbar.module.css";
 import { IoIosSearch, IoIosNotifications } from "react-icons/io";
 import Modal from "./Modal";
 const Topbar = () => {

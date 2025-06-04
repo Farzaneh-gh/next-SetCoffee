@@ -1,5 +1,5 @@
 
-.container {
+.container_user_panel {
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
