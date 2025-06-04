@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import React from "react";
 import AdminPanelLayout from "@/components/layouts/AdminPanelLayout";
 import styles from "@/styles/p-admin.module.css";

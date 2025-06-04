@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import AdminPanelLayout from "@/components/layouts/AdminPanelLayout";
 import styles from "@/styles/p-admin/products.module.css";
@@ -7,11 +9,12 @@ import connectToDB from "@/configs/db";
 import AddProduct from "@/components/templates/p-admin/products/AddProduct";
 const page = async () => {
   await connectToDB();
-  const products = await   productModel.find({ isDeleted: { $exists: false } })
+  const products = await productModel
+    .find({ isDeleted: { $exists: false } })
     .populate("comments")
     .lean()
-    .sort({ _id: -1 })
- 
+    .sort({ _id: -1 });
+
   return (
     <AdminPanelLayout>
       <div className={styles.conatiner}>
